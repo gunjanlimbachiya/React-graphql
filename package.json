@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "@apollo/server": "^4.9.3",
+    "graphql": "^16.8.1"
+  },
+  "scripts": {
+    "compile": "tsc",
+    "start": "npm run compile && nodemon --exec ts-node ./dist/index.js"
+
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^20.8.2",
+    "typescript": "^5.2.2"
+  }
+}
