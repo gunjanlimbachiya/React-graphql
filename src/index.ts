@@ -1,7 +1,7 @@
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
 import { typeDefs } from "./schema.js";
-import { employees,payrollData } from "./data.js";
+import { employees,payrollData,users } from "./data.js";
 
 const resolvers = {
   Query: {
@@ -10,6 +10,9 @@ const resolvers = {
     },
     payrollData() {
         return payrollData;
+      },
+      queryUsers() {
+        return users;
       },
       employeeInfo(parent,args){
         return employees.find((employee)=>employee.empID===args.empID)

@@ -15,9 +15,18 @@ type PayrollData{
       GrossSalary: Int!
       personal:Employee!
 }
+type Users{
+    first_name: String!,
+      last_name: String!,
+      uuid: String!,
+      status: String!,
+      username: String!
+      primary_email:String!
+}
 type Query{
     employees:[Employee]
     payrollData:[PayrollData]
+    queryUsers:[Users]
     employeeInfo(empID:ID!):Employee
     payrollInfo(empID:ID!):PayrollData
 
